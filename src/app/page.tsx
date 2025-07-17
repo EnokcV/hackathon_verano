@@ -1,6 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
+// Lista de pokebolas válidas (solo archivos con 'ball' y sin '_open', 'empty', 'fainted')
+const POKEBALL_IMAGES = [
+  ...Array(24).keys()
+].map(i => `/battle/ball${i.toString().padStart(2, '0')}.png`);
+
+
 // Tipos
 interface Pokemon {
   id: number;
@@ -233,10 +239,12 @@ function Pokedex({ pokemons }: { pokemons: Pokemon[] }) {
 }
 
 // Botón de Roll
-function RollButton({ onRoll, loading }: { onRoll: () => void; loading: boolean }) {
+function RollButton({ onRoll, loading, disabled }: { onRoll: () => void; loading: boolean, disabled?: boolean }) {
   return (
-    <button className="roll-btn" onClick={onRoll} disabled={loading}>
-      {loading ? "Obteniendo..." : "Roll"}
+    <>
+      <button className="roll-btn" onClick={onRoll} disabled={loading||disabled}>
+        {loading ? "Abriendo..." : disabled ? "Sin pokébolas" : "¡Abrir Pokébola!"}
+      </button>
       <style jsx>{`
         .roll-btn {
           background: linear-gradient(90deg, #6390F0 60%, #7AC74C 100%);
@@ -259,7 +267,7 @@ function RollButton({ onRoll, loading }: { onRoll: () => void; loading: boolean 
           cursor: not-allowed;
         }
       `}</style>
-    </button>
+    </>
   );
 }
 
@@ -283,6 +291,61 @@ function getRandomPokemonByRarity(pokemons: Pokemon[], rarity: string): Pokemon 
   return { ...base, shiny: isShiny };
 }
 
+// Componente auxiliar para pokebolas flotantes
+function PokeballSpawner({ onCollect }: { onCollect: () => void }) {
+  // Estado: array de pokebolas en pantalla
+  const [balls, setBalls] = useState<{id:number, x:number, y:number, img:string}[]>([]);
+  // Añadir pokebola aleatoria cada X segundos
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const id = Date.now() + Math.random();
+      const x = Math.random() * 80 + 5; // 5% - 85% horizontal
+      const y = Math.random() * 70 + 10; // 10% - 80% vertical
+      const img = POKEBALL_IMAGES[Math.floor(Math.random()*POKEBALL_IMAGES.length)];
+      setBalls(balls => [...balls, {id, x, y, img}]);
+    }, 2200);
+    return () => clearInterval(interval);
+  }, []);
+  // Eliminar bola al recolectar
+  const handleCollect = (id:number) => {
+    setBalls(balls => balls.filter(b => b.id !== id));
+    onCollect();
+  };
+  return (
+    <>
+      {balls.map(ball => (
+        <img
+          key={ball.id}
+          src={ball.img}
+          alt="pokeball"
+          className="pokeball-float"
+          style={{
+            position: 'fixed',
+            left: `${ball.x}%`,
+            top: `${ball.y}%`,
+            width: 48,
+            height: 48,
+            cursor: 'pointer',
+            zIndex: 1000,
+            transition: 'top 0.7s, left 0.7s'
+          }}
+          onClick={() => handleCollect(ball.id)}
+        />
+      ))}
+      <style jsx global>{`
+        .pokeball-float {
+          filter: drop-shadow(0 2px 8px #2226);
+          animation: bounce 1.2s infinite alternate;
+        }
+        @keyframes bounce {
+          0% { transform: translateY(0px); }
+          100% { transform: translateY(-14px); }
+        }
+      `}</style>
+    </>
+  );
+}
+
 // Main Page
 export default function Home() {
   const [user, setUser] = useState<User | null>(null);
@@ -290,6 +353,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [currentPokemon, setCurrentPokemon] = useState<Pokemon | null>(null);
   const [error, setError] = useState("");
+  const [credits, setCredits] = useState(0);
 
   // Cargar pokemons.json
   useEffect(() => {
@@ -323,6 +387,8 @@ export default function Home() {
 
   // Roll
   const handleRoll = () => {
+    if (credits <= 0) return;
+    setCredits(c => c-1);
     setLoading(true);
     setTimeout(() => {
       const rarity = getRandomRarity();
@@ -367,6 +433,7 @@ export default function Home() {
   return (
     <main className="main-container">
 
+      <PokeballSpawner onCollect={() => setCredits(c => c+1)} />
       <header className="header">
         <h1>Pokédex de {user.username}</h1>
         <button className="logout" onClick={() => setUser(null)}>
@@ -374,7 +441,10 @@ export default function Home() {
         </button>
       </header>
       <section className="roll-section">
-        <RollButton onRoll={handleRoll} loading={loading} />
+        <div style={{marginBottom:'0.7rem', fontWeight:'bold', fontSize:'1.1rem', color:'#333'}}>
+          Pokébolas: <span style={{color:'#6390F0'}}>{credits}</span>
+        </div>
+        <RollButton onRoll={handleRoll} loading={loading} disabled={credits<=0} />
         {currentPokemon && (
           <div className="current-pokemon">
             <PokemonCard pokemon={currentPokemon} />
