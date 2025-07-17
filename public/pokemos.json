@@ -6665,16 +6665,16 @@
     },
     {
         "id": 833,
-        "name": "Applin",
-        "type": "Grass/Dragon",
+        "name": "Chewtle",
+        "type": "Water/Rock",
         "rarity": "Common",
         "shiny": false,
         "image": "./Front/833.png"
     },
     {
         "id": 834,
-        "name": "Flapple",
-        "type": "Grass/Dragon",
+        "name": "Dreadnaw",
+        "type": "Water/Rock",
         "rarity": "Rare",
         "shiny": false,
         "image": "./Front/834.png"
