@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "name": "Bulbasaur",
+        "type": "Grass/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/001.png"
+    },
+    {
+        "id": 2,
+        "name": "Ivysaur",
+        "type": "Grass/Poison",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/002.png"
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "type": "Grass/Poison",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/003.png"
+    },
+    {
+        "id": 4,
+        "name": "Charmander",
+        "type": "Fire",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/004.png"
+    },
+    {
+        "id": 5,
+        "name": "Charmeleon",
+        "type": "Fire",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/005.png"
+    },
+    {
+        "id": 6,
+        "name": "Charizard",
+        "type": "Fire",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/006.png"
+    },
+    {
+        "id": 7,
+        "name": "Squirtle",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/007.png"
+    },
+    {
+        "id": 8,
+        "name": "Wartortle",
+        "type": "Water",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/008.png"
+    },
+    {
+        "id": 9,
+        "name": "Blastoise",
+        "type": "Water",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/009.png"
+    },
+    {
+        "id": 10,
+        "name": "Caterpie",
+        "type": "Bug",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/010.png"
+    },
+    {
+        "id": 11,
+        "name": "Metapod",
+        "type": "Bug",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/011.png"
+    },
+    {
+        "id": 12,
+        "name": "Butterfree",
+        "type": "Bug",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/012.png"
+    },
+    {
+        "id": 150,
+        "name": "Mewtwo",
+        "type": "Psychic",
+        "rarity": "Legendary",
+        "shiny": false,
+        "image": "./Front/150.png"
+    },
+    {
+        "id": 151,
+        "name": "Mew",
+        "type": "Psychic",
+        "rarity": "Legendary",
+        "shiny": false,
+        "image": "./Front/151.png"
+    }
+]
