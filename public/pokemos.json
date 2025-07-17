@@ -96,6 +96,1110 @@
         "image": "./Front/012.png"
     },
     {
+        "id": 13,
+        "name": "Weedle",
+        "type": "Bug",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/013.png"
+    },
+    {
+        "id": 14,
+        "name": "Kakuna",
+        "type": "Bug",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/014.png"
+    },
+    {
+        "id": 15,
+        "name": "Beedrill",
+        "type": "Bug",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/015.png"
+    },
+    {
+        "id": 16,
+        "name": "Pidgey",
+        "type": "Normal",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/016.png"
+    },
+    {
+        "id": 17,
+        "name": "Pidgeotto",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/017.png"
+    },
+    {
+        "id": 18,
+        "name": "Pidgeot",
+        "type": "Normal",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/018.png"
+    },
+    {
+        "id": 19,
+        "name": "Rattata",
+        "type": "Normal",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/019.png"
+    },
+    {
+        "id": 20,
+        "name": "Raticate",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/020.png"
+    },
+    {
+        "id": 21,
+        "name": "Spearow",
+        "type": "Normal",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/021.png"
+    },
+    {
+        "id": 22,
+        "name": "Fearow",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/022.png"
+    },
+    {
+        "id": 23,
+        "name": "Ekans",
+        "type": "Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/023.png"
+    },
+    {
+        "id": 24,
+        "name": "Arbok",
+        "type": "Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/024.png"
+    },
+    {
+        "id": 25,
+        "name": "Pikachu",
+        "type": "Electric",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/025.png"
+    },
+    {
+        "id": 26,
+        "name": "Raichu",
+        "type": "Electric",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/026.png"
+    },
+    {
+        "id": 27,
+        "name": "Sandshrew",
+        "type": "Ground",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/027.png"
+    },
+    {
+        "id": 28,
+        "name": "Sandslash",
+        "type": "Ground",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/028.png"
+    },
+    {
+        "id": 29,
+        "name": "Nidoran",
+        "type": "Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/029.png"
+    },
+    {
+        "id": 30,
+        "name": "Nidorina",
+        "type": "Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/030.png"
+    },
+    {
+        "id": 31,
+        "name": "Nidoqueen",
+        "type": "Poison",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/031.png"
+    },
+    {
+        "id": 32,
+        "name": "Nidoran",
+        "type": "Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/032.png"
+    },
+    {
+        "id": 33,
+        "name": "Nidorino",
+        "type": "Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/033.png"
+    },
+    {
+        "id": 34,
+        "name": "Nidoking",
+        "type": "Poison",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/034.png"
+    },
+    {
+        "id": 35,
+        "name": "Clefairy",
+        "type": "Fairy",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/035.png"
+    },
+    {
+        "id": 36,
+        "name": "Clefable",
+        "type": "Fairy",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/036.png"
+    },
+    {
+        "id": 37,
+        "name": "Vulpix",
+        "type": "Fire",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/037.png"
+    },
+    {
+        "id": 38,
+        "name": "Ninetales",
+        "type": "Fire",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/038.png"
+    },
+    {
+        "id": 39,
+        "name": "Jigglypuff",
+        "type": "Normal",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/039.png"
+    },
+    {
+        "id": 40,
+        "name": "Wigglytuff",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/040.png"
+    },
+    {
+        "id": 41,
+        "name": "Zubat",
+        "type": "Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/041.png"
+    },
+    {
+        "id": 42,
+        "name": "Golbat",
+        "type": "Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/042.png"
+    },
+    {
+        "id": 43,
+        "name": "Oddish",
+        "type": "Grass/Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/043.png"
+    },
+    {
+        "id": 44,
+        "name": "Gloom",
+        "type": "Grass/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/044.png"
+    },
+    {
+        "id": 45,
+        "name": "Vileplume",
+        "type": "Grass/Poison",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/045.png"
+    },
+    {
+        "id": 46,
+        "name": "Paras",
+        "type": "Grass/Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/046.png"
+    },
+    {
+        "id": 47,
+        "name": "Parasect",
+        "type": "Grass/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/047.png"
+    },
+    {
+        "id": 48,
+        "name": "Venonat",
+        "type": "Grass/Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/048.png"
+    },
+    {
+        "id": 49,
+        "name": "Venomoth",
+        "type": "Grass/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/049.png"
+    },
+    {
+        "id": 50,
+        "name": "Diglett",
+        "type": "Ground",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/050.png"
+    },
+    {
+        "id": 51,
+        "name": "Dugtrio",
+        "type": "Ground",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/051.png"
+    },
+    {
+        "id": 52,
+        "name": "Meowth",
+        "type": "Normal",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/052.png"
+    },
+    {
+        "id": 53,
+        "name": "Persian",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/053.png"
+    },
+    {
+        "id": 54,
+        "name": "Psyduck",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/054.png"
+    },
+    {
+        "id": 55,
+        "name": "Golduck",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/055.png"
+    },
+    {
+        "id": 56,
+        "name": "Mankey",
+        "type": "Fighting",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/056.png"
+    },
+    {
+        "id": 57,
+        "name": "Primeape",
+        "type": "Fighting",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/057.png"
+    },
+    {
+        "id": 58,
+        "name": "Growlithe",
+        "type": "Fire",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/058.png"
+    },
+    {
+        "id": 59,
+        "name": "Arcanine",
+        "type": "Fire",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/059.png"
+    },
+    {
+        "id": 60,
+        "name": "Poliwag",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/060.png"
+    },
+    {
+        "id": 61,
+        "name": "Poliwhirl",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/061.png"
+    },
+    {
+        "id": 62,
+        "name": "Poliwrath",
+        "type": "Water",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/062.png"
+    },
+    {
+        "id": 63,
+        "name": "Abra",
+        "type": "Psychic",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/063.png"
+    },
+    {
+        "id": 64,
+        "name": "Kadabra",
+        "type": "Psychic",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/064.png"
+    },
+    {
+        "id": 65,
+        "name": "Alakazam",
+        "type": "Psychic",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/065.png"
+    },
+    {
+        "id": 66,
+        "name": "Machop",
+        "type": "Fighting",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/066.png"
+    },
+    {
+        "id": 67,
+        "name": "Machoke",
+        "type": "Fighting",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/067.png"
+    },
+    {
+        "id": 68,
+        "name": "Machamp",
+        "type": "Fighting",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/068.png"
+    },
+    {
+        "id": 68,
+        "name": "Machamp",
+        "type": "Fighting",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/068.png"
+    },
+    {
+        "id": 69,
+        "name": "Bellsprout",
+        "type": "Grass/Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/069.png"
+    },
+    {
+        "id": 70,
+        "name": "Weepinbell",
+        "type": "Grass/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/070.png"
+    },
+    {
+        "id": 71,
+        "name": "Victreebel",
+        "type": "Grass/Poison",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/071.png"
+    },
+    {
+        "id": 72,
+        "name": "Tentacool",
+        "type": "Water/Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/072.png"
+    },
+    {
+        "id": 73,
+        "name": "Tentacruel",
+        "type": "Water/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/073.png"
+    },
+    {
+        "id": 74,
+        "name": "Geodude",
+        "type": "Rock/Ground",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/074.png"
+    }, 
+    {
+        "id": 75,
+        "name": "Graveler",
+        "type": "Rock/Ground",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/075.png"
+    },
+    {
+        "id": 76,
+        "name": "Golem",
+        "type": "Rock/Ground",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/076.png"
+    },
+    {
+        "id": 77,
+        "name": "Ponyta",
+        "type": "Fire",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/077.png"
+    },
+    {
+        "id": 78,
+        "name": "Rapidash",
+        "type": "Fire",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/078.png"
+    },
+    {
+        "id": 79,
+        "name": "Slowpoke",
+        "type": "Water/Psychic",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/079.png"
+    },
+    {
+        "id": 80,
+        "name": "Slowbro",
+        "type": "Water/Psychic",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/080.png"
+    },
+    {
+        "id": 81,
+        "name": "Magnemite",
+        "type": "Electric/Steel",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/081.png"
+    },
+    {
+        "id": 82,
+        "name": "Magneton",
+        "type": "Electric/Steel",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/082.png"
+    },
+    {
+        "id": 83,
+        "name": "Farfetch'd",
+        "type": "Normal/Flying",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/083.png"
+    },
+    {
+        "id": 84,
+        "name": "Doduo",
+        "type": "Normal/Flying",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/084.png"
+    },
+    {
+        "id": 85,
+        "name": "Dodrio",
+        "type": "Normal/Flying",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/085.png"
+    },
+    {
+        "id": 86,
+        "name": "Seel",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/086.png"
+    },
+    {
+        "id": 87,
+        "name": "Dewgong",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/087.png"
+    },
+    {
+        "id": 88,
+        "name": "Grimer",
+        "type": "Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/088.png"
+    },
+    {
+        "id": 89,
+        "name": "Muk",
+        "type": "Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/089.png"
+    },
+    {
+        "id": 90,
+        "name": "Shellder",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/090.png"
+    },
+    {
+        "id": 91,
+        "name": "Cloyster",
+        "type": "Water/Ice",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/091.png"
+    },
+    {
+        "id": 92,
+        "name": "Gastly",
+        "type": "Ghost/Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/092.png"
+    },
+    {
+        "id": 93,
+        "name": "Haunter",
+        "type": "Ghost/Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/093.png"
+    },
+    {
+        "id": 94,
+        "name": "Gengar",
+        "type": "Ghost/Poison",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/094.png"
+    },
+    {
+        "id": 95,
+        "name": "Onix",
+        "type": "Rock/Ground",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/095.png"
+    },
+    {
+        "id": 96,
+        "name": "Drowzee",
+        "type": "Psychic",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/096.png"
+    },
+    {
+        "id": 97,
+        "name": "Hypno",
+        "type": "Psychic",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/097.png"
+    },
+    {
+        "id": 98,
+        "name": "Krabby",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/098.png"
+    },
+    {
+        "id": 99,
+        "name": "Kingler",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/099.png"
+    },
+    {
+        "id": 100,
+        "name": "Voltorb",
+        "type": "Electric",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/100.png"
+    },
+    {
+        "id": 101,
+        "name": "Electrode",
+        "type": "Electric",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/101.png"
+    },
+    {
+        "id": 102,
+        "name": "Exeggcute",
+        "type": "Grass/Psychic",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/102.png"
+    },
+    {
+        "id": 103,
+        "name": "Exeggutor",
+        "type": "Grass/Psychic",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/103.png"
+    },
+    {
+        "id": 104,
+        "name": "Cubone",
+        "type": "Ground",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/104.png"
+    },
+    {
+        "id": 105,
+        "name": "Marowak",
+        "type": "Ground",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/105.png"
+    },
+    {
+        "id": 106,
+        "name": "Hitmonlee",
+        "type": "Fighting",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/106.png"
+    },
+    {
+        "id": 107,
+        "name": "Hitmonchan",
+        "type": "Fighting",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/107.png"
+    },
+    {
+        "id": 108,
+        "name": "Lickitung",
+        "type": "Normal",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/108.png"
+    },
+    {
+        "id": 109,
+        "name": "Koffing",
+        "type": "Poison",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/109.png"
+    },
+    {
+        "id": 110,
+        "name": "Weezing",
+        "type": "Poison",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/110.png"
+    },
+    {
+        "id": 111,
+        "name": "Rhyhorn",
+        "type": "Ground",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/111.png"
+    },
+    {
+        "id": 112,
+        "name": "Rhydon",
+        "type": "Ground",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/112.png"
+    },
+    {
+        "id": 113,
+        "name": "Chansey",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/113.png"
+    },
+    {
+        "id": 114,
+        "name": "Tangela",
+        "type": "Grass",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/114.png"
+    },
+    {
+        "id": 115,
+        "name": "Tangrowth",
+        "type": "Grass",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/115.png"
+    },
+    {
+        "id": 116,
+        "name": "Horsea",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/116.png"
+    },
+    {
+        "id": 117,
+        "name": "Seadra",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/117.png"
+    },
+    {
+        "id": 118,
+        "name": "Goldeen",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/118.png"
+    },
+    {
+        "id": 119,
+        "name": "Seaking",
+        "type": "Water",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/119.png"
+    },
+    {
+        "id": 120,
+        "name": "Staryu",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/120.png"
+    },
+    {
+        "id": 121,
+        "name": "Starmie",
+        "type": "Water/Psychic",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/121.png"
+    },
+    {
+        "id": 122,
+        "name": "Mr. Mime",
+        "type": "Psychic",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/122.png"
+    },
+    {
+        "id": 123,
+        "name": "Scyther",
+        "type": "Bug",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/123.png"
+    },
+    {
+        "id": 124,
+        "name": "Jynx",
+        "type": "Ice/Psychic",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/124.png"
+    },
+    {
+        "id": 125,
+        "name": "Electabuzz",
+        "type": "Electric",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/125.png"
+    },
+    {
+        "id": 126,
+        "name": "Magmar",
+        "type": "Fire",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/126.png"
+    },
+    {
+        "id": 127,
+        "name": "Pinsir",
+        "type": "Bug",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/127.png"
+    },
+    {
+        "id": 128,
+        "name": "Tauros",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/128.png"
+    },
+    {
+        "id": 129,
+        "name": "Magikarp",
+        "type": "Water",
+        "rarity": "Common",
+        "shiny": false,
+        "image": "./Front/129.png"
+    },
+    {
+        "id": 130,
+        "name": "Gyarados",
+        "type": "Water",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/130.png"
+    },
+    {
+        "id": 131,
+        "name": "Lapras",
+        "type": "Water/Ice",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/131.png"
+    },
+    {
+        "id": 132,
+        "name": "Ditto",
+        "type": "Normal",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/132.png"
+    },
+    {
+        "id": 133,
+        "name": "Eevee",
+        "type": "Normal",
+        "rarity": "Uncommon",
+        "shiny": false,
+        "image": "./Front/133.png"
+    },
+    {
+        "id": 134,
+        "name": "Vaporeon",
+        "type": "Water",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/134.png"
+    },
+    {
+        "id": 135,
+        "name": "Jolteon",
+        "type": "Electric",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/135.png"
+    },
+    {
+        "id": 136,
+        "name": "Flareon",
+        "type": "Fire",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/136.png"
+    },
+    {
+        "id": 137,
+        "name": "Porygon",
+        "type": "Normal",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/137.png"
+    },
+    {
+        "id": 138,
+        "name": "Omanyte",
+        "type": "Water/Rock",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/138.png"
+    },
+    {
+        "id": 139,
+        "name": "Omastar",
+        "type": "Water/Rock",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/139.png"
+    },
+    {
+        "id": 140,
+        "name": "Kabuto",
+        "type": "Water/Rock",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/140.png"
+    },
+    {
+        "id": 141,
+        "name": "Kabutops",
+        "type": "Water/Rock",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/141.png"
+    },
+    {
+        "id": 142,
+        "name": "Aerodactyl",
+        "type": "Water/Rock",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/142.png"
+    },
+    {
+        "id": 143,
+        "name": "Snorlax",
+        "type": "Water/Rock",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/143.png"
+    },
+    {
+        "id": 144,
+        "name": "Articuno",
+        "type": "Ice/Flying",
+        "rarity": "Legendary",
+        "shiny": false,
+        "image": "./Front/144.png"
+    },
+    {
+        "id": 145,
+        "name": "Zapdos",
+        "type": "Electric/Flying",
+        "rarity": "Legendary",
+        "shiny": false,
+        "image": "./Front/145.png"
+    },
+    {
+        "id": 146,
+        "name": "Moltres",
+        "type": "Fire/Flying",
+        "rarity": "Legendary",
+        "shiny": false,
+        "image": "./Front/146.png"
+    },
+    {
+        "id": 147,
+        "name": "Dratini",
+        "type": "Dragon",
+        "rarity": "Rare",
+        "shiny": false,
+        "image": "./Front/147.png"
+    },
+    {
+        "id": 148,
+        "name": "Dragonair",
+        "type": "Dragon",
+        "rarity": "Epic",
+        "shiny": false,
+        "image": "./Front/148.png"
+    },
+    {
+        "id": 149,
+        "name": "Dragonite",
+        "type": "Dragon/Flying",
+        "rarity": "Legendary",
+        "shiny": false,
+        "image": "./Front/149.png"
+    },
+    {
         "id": 150,
         "name": "Mewtwo",
         "type": "Psychic",
