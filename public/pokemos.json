@@ -6353,17 +6353,17 @@
     },
     {
         "id": 794,
-        "name": "Magearna",
-        "type": "Steel/Fairy",
-        "rarity": "Legendary",
+        "name": "Buzzwole",
+        "type": "Bug/Fighting",
+        "rarity": "Epic",
         "shiny": false,
         "image": "./Front/794.png"
     },
     {
         "id": 795,
-        "name": "Marshadow",
-        "type": "Fighting/Ghost",
-        "rarity": "Legendary",
+        "name": "Pheromosa",
+        "type": "Bug/Fighting",
+        "rarity": "Epic",
         "shiny": false,
         "image": "./Front/795.png"
     },
@@ -6409,16 +6409,16 @@
     },
     {
         "id": 801,
-        "name": "Meltan",
-        "type": "Steel",
-        "rarity": "Legendary",
+        "name": "Magearna",
+        "type": "Steel/Fairy",
+        "rarity": "Epic",
         "shiny": false,
         "image": "./Front/801.png"
     },
     {
         "id": 802,
-        "name": "Melmetal",
-        "type": "Steel",
+        "name": "Marshadow",
+        "type": "Fighting/Ghost",
         "rarity": "Legendary",
         "shiny": false,
         "image": "./Front/802.png"
@@ -6465,17 +6465,17 @@
     },
     {
         "id": 808,
-        "name": "Cinderace",
-        "type": "Fire",
+        "name": "Meltan",
+        "type": "Steel",
         "rarity": "Epic",
         "shiny": false,
         "image": "./Front/808.png"
     },
     {
         "id": 809,
-        "name": "Sobble",
-        "type": "Water",
-        "rarity": "Uncommon",
+        "name": "Melmetal",
+        "type": "Steel",
+        "rarity": "Legendary",
         "shiny": false,
         "image": "./Front/809.png"
     },
