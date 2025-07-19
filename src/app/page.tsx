@@ -302,7 +302,7 @@ function PokeballSpawner({ onCollect }: { onCollect: () => void }) {
       const x = Math.random() * 80 + 5; // 5% - 85% horizontal
       const y = Math.random() * 70 + 10; // 10% - 80% vertical
       const img = POKEBALL_IMAGES[Math.floor(Math.random()*POKEBALL_IMAGES.length)];
-      setBalls(balls => [...balls, {id, x, y, img}]);
+      setBalls(balls => balls.length >= 100 ? balls : [...balls, {id, x, y, img}]);
     }, 2200);
     return () => clearInterval(interval);
   }, []);
@@ -324,7 +324,7 @@ function PokeballSpawner({ onCollect }: { onCollect: () => void }) {
             left: `${ball.x}%`,
             top: `${ball.y}%`,
             width: 48,
-            height: 48,
+            height: 48*2,
             cursor: 'pointer',
             zIndex: 1000,
             transition: 'top 0.7s, left 0.7s'
