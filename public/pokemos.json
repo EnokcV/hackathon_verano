@@ -7897,8 +7897,8 @@
     },
     {
         "id": 987,
-        "name": "Flapple",
-        "type": "Grass/Poison",
+        "name": "Flutter Mane",
+        "type": "Ghost/Fairy",
         "rarity":"Legendary",
         "shiny": false,
         "image": "./Front/987.png"
