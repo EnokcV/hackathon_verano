@@ -7902,5 +7902,309 @@
         "rarity":"Legendary",
         "shiny": false,
         "image": "./Front/987.png"
+    },
+    {
+        "id": 988,
+        "name": "Slither Wing",
+        "type": "Bug/Flying",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/988.png"
+    },
+    {
+        "id": 989,
+        "name": "Sandy Shocks",
+        "type": "Electric/Ground",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/989.png"
+    },
+    {
+        "id": 990,
+        "name": "Iron Treads",
+        "type": "Steel/Ground",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/990.png"
+    },
+    {
+        "id": 991,
+        "name": "Iron Bundle",
+        "type": "Ice/Water",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/991.png"
+    },
+    {
+        "id": 992,
+        "name": "Iron Hands",
+        "type": "Fighting/Electric",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/992.png"
+    },
+    {
+        "id": 993,
+        "name": "Iron Jugulis",
+        "type": "Dark/Flying",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/993.png"
+    },
+    {
+        "id": 994,
+        "name": "Iron Moth",
+        "type": "Fire/Poison",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/994.png"
+    },
+    {
+        "id": 995,
+        "name": "Iron Thorns",
+        "type": "Rock/Electric",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/995.png"
+    },
+    {
+        "id": 996,
+        "name": "Frigibax",
+        "type": "Dragon/Ice",
+        "rarity":"Rare",
+        "shiny": false,
+        "image": "./Front/996.png"
+    },
+    {
+        "id": 997,
+        "name": "Arctibax",
+        "type": "Dragon/Ice",
+        "rarity":"Epic",
+        "shiny": false,
+        "image": "./Front/997.png"
+    },
+    {
+        "id": 998,
+        "name": "Baxcalibur",
+        "type": "Dragon/Ice",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/998.png"
+    },
+    {
+        "id": 999,
+        "name": "Gimmighoul",
+        "type": "Ghost",
+        "rarity":"Rare",
+        "shiny": false,
+        "image": "./Front/999.png"
+    },
+    {
+        "id": 1000,
+        "name": "Gholdengo",
+        "type": "Ghost",
+        "rarity":"Epic",
+        "shiny": false,
+        "image": "./Front/1000.png"
+    },
+    {
+        "id": 1001,
+        "name": "Wo-Chien",
+        "type": "Dark/Grass",
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1001.png"
+    },
+    {
+        "id": 1002,
+        "name": "Chien-Pao",
+        "type": "Dark/Ice" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1002.png"
+    },
+    {
+        "id": 1003,
+        "name": "Ting-Lu",
+        "type": "Dark/Ground" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1003.png"
+    },
+    {
+        "id": 1004,
+        "name": "Chi-Yu",
+        "type": "Dark/Fire" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1004.png"
+    },
+    {
+        "id": 1005,
+        "name": "Roaring Moon",
+        "type": "Dark/Dragon" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1005.png"
+    },
+    {
+        "id": 1006,
+        "name": "Iron Valiant",
+        "type": "Fairy/Fighting" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1006.png"
+    },
+    {
+        "id": 1007,
+        "name": "Koraidon",
+        "type": "Dragon/Fighting" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1007.png"
+    },
+    {
+        "id": 1008,
+        "name": "Miraidon",
+        "type": "Dragon/Electric" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1008.png"
+    },
+    {
+        "id": 1009,
+        "name": "Walking Wake",
+        "type": "Dragon/Water" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1009.png"
+    },
+    {
+        "id": 1010,
+        "name": "Iron Leaves",
+        "type": "Psychic/Grass" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1010.png"
+    },
+    {
+        "id": 1011,
+        "name": "Dipplin",
+        "type": "Dragon/Grass" ,
+        "rarity":"Epic",
+        "shiny": false,
+        "image": "./Front/1011.png"
+    },
+    {
+        "id": 1012,
+        "name": "Poltchageist",
+        "type": "Ghost/Grass" ,
+        "rarity":"Epic",
+        "shiny": false,
+        "image": "./Front/1012.png"
+    },
+    {
+        "id": 1013,
+        "name": "Sinistcha",
+        "type": "Ghost/Grass" ,
+        "rarity":"Epic",
+        "shiny": false,
+        "image": "./Front/1013.png"
+    },
+    {
+        "id": 1014,
+        "name": "Okidogi",
+        "type": "Ghost/Grass" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1014.png"
+    },
+    {
+        "id": 1015,
+        "name": "Munkidori",
+        "type": "Poison/Psychic" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1015.png"
+    },
+    {
+        "id": 1016,
+        "name": "Fezandipiti",
+        "type": "Poison/Fairy" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1016.png"
+    },
+    {
+        "id": 1017,
+        "name": "Ogerpon",
+        "type": "Grass" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1017.png"
+    },
+    {
+        "id": 1018,
+        "name": "Archaludon",
+        "type": "Dragon/Iron" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1018.png"
+    },
+    {
+        "id": 1019,
+        "name": "Hydrapple",
+        "type": "Grass/Dragon" ,
+        "rarity":"Epic",
+        "shiny": false,
+        "image": "./Front/1019.png"
+    },
+    {
+        "id": 1020,
+        "name": "Gouging Fire",
+        "type": "Fire/Dragon" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1020.png"
+    },
+    {
+        "id": 1021,
+        "name": "Raging Bolt",
+        "type": "Electric/Dragon" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1021.png"
+    },
+    {
+        "id": 1022,
+        "name": "Iron Boulder",
+        "type": "Rock/Psychic" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1022.png"
+    },
+    {
+        "id": 1023,
+        "name": "Iron Crown",
+        "type": "Iron/Psychic" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1023.png"
+    },
+    {
+        "id": 1024,
+        "name": "Terapagos",
+        "type": "Normal" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1024.png"
+    },
+    {
+        "id": 1025,
+        "name": "Pecharunt",
+        "type": "Ghost/Poison" ,
+        "rarity":"Legendary",
+        "shiny": false,
+        "image": "./Front/1025.png"
     }
 ]
