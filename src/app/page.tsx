@@ -1,5 +1,8 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
+import ClientOnly from "../components/ClientOnly";
+import TwoFactorVerification from "../components/TwoFactorVerification";
 
 // Lista de pokebolas válidas (solo archivos con 'ball' y sin '_open', 'empty', 'fainted')
 const POKEBALL_IMAGES = [
@@ -18,9 +21,18 @@ interface Pokemon {
 }
 
 type User = {
+  id: string;
   username: string;
+  email: string;
+  credits: number;
   pokedex: Pokemon[];
 };
+
+type TwoFactorState = {
+  userId: string;
+  email: string;
+  userData: any;
+} | null;
 
 const RARITY_PROBABILITIES: Record<string, number> = {
   Common: 0.6,
@@ -39,33 +51,119 @@ const RARITY_COLORS: Record<string, string> = {
 };
 
 // Login/Signup form
-function LoginSignupForm({ onAuth }: { onAuth: (username: string) => void }) {
+function LoginSignupForm({ onAuth }: { onAuth: (user: any) => void }) {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isSignup, setIsSignup] = useState(false);
   const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!username.trim()) {
-      setError("El nombre de usuario es requerido");
-      return;
-    }
     setError("");
-    onAuth(username.trim());
+    setLoading(true);
+
+    try {
+      if (isSignup) {
+        // Registration
+        if (!email.trim() || !username.trim() || !password.trim()) {
+          setError("Todos los campos son requeridos para el registro");
+          setLoading(false);
+          return;
+        }
+
+        const response = await fetch('/api/auth/register', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            email: email.trim(),
+            username: username.trim(),
+            password: password.trim()
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Registration successful, now login
+          onAuth(data.user);
+        } else {
+          setError(data.error || 'Error en el registro');
+        }
+      } else {
+        // Login
+        if (!username.trim() || !password.trim()) {
+          setError("Usuario y contraseña son requeridos");
+          setLoading(false);
+          return;
+        }
+
+        const response = await fetch('/api/auth/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            username: username.trim(),
+            password: password.trim()
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          // Login successful
+          onAuth(data.user);
+        } else {
+          setError(data.error || 'Error en el inicio de sesión');
+        }
+      }
+    } catch (error) {
+      setError('Error de conexión. Inténtalo de nuevo.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="auth-container">
       <form onSubmit={handleSubmit} className="auth-form">
         <h2>{isSignup ? "Registro" : "Iniciar sesión"}</h2>
+        
+        {isSignup && (
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            required
+          />
+        )}
+        
         <input
           type="text"
           placeholder="Usuario"
           value={username}
           onChange={e => setUsername(e.target.value)}
+          required
         />
+        
+        <input
+          type="password"
+          placeholder="Contraseña"
+          value={password}
+          onChange={e => setPassword(e.target.value)}
+          required
+        />
+        
         {error && <div className="error">{error}</div>}
-        <button type="submit">{isSignup ? "Registrarse" : "Entrar"}</button>
+        
+        <button type="submit" disabled={loading}>
+          {loading ? "Cargando..." : (isSignup ? "Registrarse" : "Entrar")}
+        </button>
         <div className="toggle-auth">
           {isSignup ? (
             <span>
@@ -295,6 +393,7 @@ function getRandomPokemonByRarity(pokemons: Pokemon[], rarity: string): Pokemon 
 function PokeballSpawner({ onCollect }: { onCollect: () => void }) {
   // Estado: array de pokebolas en pantalla
   const [balls, setBalls] = useState<{id:number, x:number, y:number, img:string}[]>([]);
+  
   // Añadir pokebola aleatoria cada X segundos
   useEffect(() => {
     const interval = setInterval(() => {
@@ -302,8 +401,8 @@ function PokeballSpawner({ onCollect }: { onCollect: () => void }) {
       const x = Math.random() * 80 + 5; // 5% - 85% horizontal
       const y = Math.random() * 70 + 10; // 10% - 80% vertical
       const img = POKEBALL_IMAGES[Math.floor(Math.random()*POKEBALL_IMAGES.length)];
-      setBalls(balls => balls.length >= 100 ? balls : [...balls, {id, x, y, img}]);
-    }, 2200);
+      setBalls(balls => balls.length >= 5 ? balls : [...balls, {id, x, y, img}]);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
   // Eliminar bola al recolectar
@@ -353,7 +452,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [currentPokemon, setCurrentPokemon] = useState<Pokemon | null>(null);
   const [error, setError] = useState("");
-  const [credits, setCredits] = useState(0);
+  const [twoFactorState, setTwoFactorState] = useState<TwoFactorState>(null);
 
   // Cargar pokemons.json
   useEffect(() => {
@@ -363,10 +462,45 @@ export default function Home() {
       .catch(() => setError("No se pudo cargar la lista de Pokémon"));
   }, []);
 
-  // Simulación de login/signup
-  const handleAuth = (username: string) => {
-    setUser({ username, pokedex: [] });
+  // Handle successful authentication
+  const handleAuth = (userData: any) => {
+    if (userData.requiresTwoFactor) {
+      // Set 2FA state for verification
+      setTwoFactorState({
+        userId: userData.userId,
+        email: userData.user.email,
+        userData: userData.user
+      });
+    } else {
+      // Direct login success
+      setUser({
+        id: userData.id,
+        username: userData.username,
+        email: userData.email,
+        credits: userData.credits || 5,
+        pokedex: userData.pokedex || []
+      });
+      setCurrentPokemon(null);
+      setTwoFactorState(null);
+    }
+  };
+
+  // Handle successful 2FA verification
+  const handle2FASuccess = (userData: any) => {
+    setUser({
+      id: userData.id,
+      username: userData.username,
+      email: userData.email,
+      credits: userData.credits || 5,
+      pokedex: userData.pokedex || []
+    });
     setCurrentPokemon(null);
+    setTwoFactorState(null);
+  };
+
+  // Handle 2FA cancellation
+  const handle2FACancel = () => {
+    setTwoFactorState(null);
   };
 
   // Cambiar fondo del body según rareza
@@ -385,41 +519,71 @@ export default function Home() {
     }
   }, [currentPokemon]);
 
-  // Roll
-  const handleRoll = () => {
-    if (credits <= 0) return;
-    setCredits(c => c-1);
+  // Roll Pokemon with backend integration
+  const handleRoll = async () => {
+    if (!user || user.credits <= 0) return;
+    
     setLoading(true);
-    setTimeout(() => {
+    
+    try {
+      // Generate Pokemon locally first
       const rarity = getRandomRarity();
       const poke = getRandomPokemonByRarity(pokemons, rarity);
+      
       if (!poke) {
         setError("No hay Pokémon de rareza " + rarity);
         setLoading(false);
         return;
       }
-      setCurrentPokemon(poke);
-      setUser(prev => {
-        if (!prev) return prev;
-        const exists = prev.pokedex.find(p => p.id === poke.id);
-        // Si no existe, agregarlo
-        if (!exists) {
-          return { ...prev, pokedex: [...prev.pokedex, poke] };
-        }
-        // Si existe y es shiny, y el registrado no es shiny, reemplazar
-        if (poke.shiny && !exists.shiny) {
+
+      // Save Pokemon to backend
+      const response = await fetch('/api/pokemon/catch', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          userId: user.id,
+          pokemon: poke,
+          creditsUsed: 1
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Update local state with caught Pokemon and new credits
+        setCurrentPokemon(poke);
+        setUser(prev => {
+          if (!prev) return prev;
+          
+          const exists = prev.pokedex.find(p => p.id === poke.id && p.shiny === poke.shiny);
+          let newPokedex = prev.pokedex;
+          
+          if (!exists) {
+            // Add new Pokemon
+            newPokedex = [...prev.pokedex, poke];
+          } else if (poke.shiny && !exists.shiny) {
+            // Replace normal with shiny
+            newPokedex = prev.pokedex.map(p =>
+              p.id === poke.id && !p.shiny ? poke : p
+            );
+          }
+          
           return {
             ...prev,
-            pokedex: prev.pokedex.map(p =>
-              p.id === poke.id ? poke : p
-            ),
+            pokedex: newPokedex,
+            credits: data.creditsRemaining
           };
-        }
-        // Si ya existe (sea normal o shiny), no hacer nada
-        return prev;
-      });
+        });
+      } else {
+        setError(data.error || 'Error al capturar Pokémon');
+      }
+    } catch (error) {
+      setError('Error de conexión al capturar Pokémon');
+    } finally {
       setLoading(false);
-    }, 350);
+    }
   };
 
   if (error) {
@@ -433,7 +597,9 @@ export default function Home() {
   return (
     <main className="main-container">
 
-      <PokeballSpawner onCollect={() => setCredits(c => c+1)} />
+      <ClientOnly>
+        <PokeballSpawner onCollect={() => setUser(prev => prev ? { ...prev, credits: prev.credits + 1 } : prev)} />
+      </ClientOnly>
       <header className="header">
         <h1>Pokédex de {user.username}</h1>
         <button className="logout" onClick={() => setUser(null)}>
@@ -442,9 +608,9 @@ export default function Home() {
       </header>
       <section className="roll-section">
         <div style={{marginBottom:'0.7rem', fontWeight:'bold', fontSize:'1.1rem', color:'#333'}}>
-          Pokébolas: <span style={{color:'#6390F0'}}>{credits}</span>
+          Pokébolas: <span style={{color:'#6390F0'}}>{user.credits}</span>
         </div>
-        <RollButton onRoll={handleRoll} loading={loading} disabled={credits<=0} />
+        <RollButton onRoll={handleRoll} loading={loading} disabled={user.credits<=0} />
         {currentPokemon && (
           <div className="current-pokemon">
             <PokemonCard pokemon={currentPokemon} />
